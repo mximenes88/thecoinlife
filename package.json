@@ -1,0 +1,11 @@
+{
+  "name": "coin_life",
+  "version": "1.0.0",
+  "description": "A rare coins Marketplace app for buying/selling ",
+  "main": "src/server.js",
+  "scripts": {
+    "test": "export NODE_ENV=test && jasmine"
+  },
+  "author": "",
+  "license": "ISC"
+}
