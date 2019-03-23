@@ -21,10 +21,21 @@ body{
 }
 
 .jumbotron{
-    magrin-top:10px;
+    margin-top:10px;
     text-align: center;
     background-color:teal;
     height:200px;
     font-family: 'Heebo', sans-serif;
     height: 20%;
 }
+
+.about{
+    margin-left:300px;
+    margin-top:20px;
+    text-align: center;
+}
+
+.about_img{
+    margin-left:500px;
+}
+
