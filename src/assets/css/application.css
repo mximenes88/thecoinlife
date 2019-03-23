@@ -1,0 +1,30 @@
+.wrapper{
+        background: lightgrey;
+        position: fixed;
+        left: 0;
+        top:0px;
+        bottom: 0px;
+        width: 160px;
+        padding:40px;
+        font-family: 'Heebo', sans-serif;
+}
+
+body{
+    font-family: 'Heebo', sans-serif;
+}
+
+.info {
+    background: rgb(114, 102, 184);
+    min-height:700px;
+    display: block;
+    margin-left: 160px; 
+}
+
+.jumbotron{
+    magrin-top:10px;
+    text-align: center;
+    background-color:teal;
+    height:200px;
+    font-family: 'Heebo', sans-serif;
+    height: 20%;
+}
