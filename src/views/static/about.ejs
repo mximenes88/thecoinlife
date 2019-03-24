@@ -8,12 +8,24 @@
   <body>
 
     <% include ./partials/navbar.ejs %>
-
-    <section class="about">
-        <h4>About Us</h4>
-        <p>We are a community of rare coin collectors committed to a new buying/selling experience.<br>Gone are the days of finding coins in old dusty basements.<br> Join THE COIN LIFE!</p>
-         <img src="images/coinlife.jpeg" width=500px height=500px/>
-      </section>
+    <div class="info">
+      <main class="container">
+        <!-- Jumbotron Header -->
+        <div class="jumbotron">
+          <img src="images/logo.png" width="30" height="30">
+          <h1 class="display-3">The Coin Life</h1>
+          <p class="lead"> An exciting new way to buy & sell coins online!</p>
+          <a href="/users/sign_up" class="btn btn-primary btn-sml">Sign up</a>
+          <a href="/users/login"class="btn btn-primary btn-sml">Login</a>
+    
+        </div>
+      <div class="about_us">
+       <div class="card col-sm-3 col-lg-12">
+        <div class="card-img-top"><img src="images/coinlife.jpeg" width="200" height="200" /></div>
+        <div class="card-body">
+            <p class="card-text">We are a community of rare coin collectors committed to a new buying/selling experience.<br>Gone are the days of finding coins in old dusty basements.<br> Join THE COIN LIFE!</p></div>
+     </div>
+     </div>
 
     <% include ./partials/baseScripts.ejs %>
 
