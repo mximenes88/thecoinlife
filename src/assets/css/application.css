@@ -14,24 +14,36 @@ body{
 }
 
 .info {
-    background: rgb(114, 102, 184);
+    background: rgb(127, 122, 160);
     min-height:700px;
     display: block;
     margin-left: 160px; 
+    padding:10px;
+}
+
+.info1{
+    padding:20px;
+    background: lightgrey;
 }
 
 .jumbotron{
     text-align: center;
     background-color:teal;
     font-family: 'Heebo', sans-serif;
-    height: 10%;
+    padding-top:25px;
+    padding-bottom:25px;
+    width:100%;
+    margin-top:0px;
+   
 }
 
 .about_us{
+    padding:30px;
     margin-left:130px;
     margin-right:55px;
     margin-bottom:10px;
     text-align: center;
+    background: lightgrey;
 }
 
 .about_img{
