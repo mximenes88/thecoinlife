@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+ <html>
+   <head>
+     <% include ../static/partials/head.ejs %>
+   </head>
+   <body>
+     <%include ../static/partials/navbar.ejs %>
+      <main class="container">
+          <div class="jumbotron">
+              <img src="../images/logo.png" width="30" height="30">
+              <h1 class="display-3">The Coin Life</h1>
+              <p class="lead"> An exciting new way to buy & sell coins online!</p>
+              <% if(currentUser) { %>
+              <a href="/users/sign_out" class="btn btn-primary btn-sml">Sign Out</a>
+              <%} else {%>
+              <a href="/users/sign_up" class="btn btn-primary btn-sml">Sign up</a>
+              <a href="/users/sign_in"class="btn btn-primary btn-sml">Login</a>
+              <% }%>
+       </div>
+       <h1 class="title1">SELLERS PAGE</h1>
+       <div class="profile">
+       <div class="row no-gutters">
+          <div class="card col-sm-3 col-lg-4 border-right-10">
+              <div class="card-img-top"><img src="../images/profile.png" /></div>
+              <div class="card-body">
+          </div>
+        </div>
+      </div>
+        <div class="uploads">
+        <h1>Upload New Product</h1> 
+        <form action="/products/create" method="post">
+          <div class="form-group">
+                  <label for="name">Name</label>
+                  <input type="name" class="form-control" name="Name" placeholder="Enter product name">
+                </div>
+
+                <div class="form-group">
+                  <label for="description">Description</label>
+                  <input type="description" class="form-control" name="description"  placeholder="Enter product description">
+                </div>
+                <div class="form-group">
+                      <label for="price">Price</label>
+                      <input type="price" class="form-control" name="price" placeholder="Enter product price">
+              </div>
+
+                <div class="form-group">
+                      <input type="file" name="name" multiple><br><br>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Upload</button>
+              </form>
+            </div>
+        </form>
+      </div>
+     
+      </main>
+      <%include ../static/partials/baseScripts.ejs %>
+    </body>
+ </html>
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
