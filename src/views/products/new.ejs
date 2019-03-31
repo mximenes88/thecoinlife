@@ -31,7 +31,7 @@
         <form action="/products/create" method="post">
           <div class="form-group">
                   <label for="name">Name</label>
-                  <input type="name" class="form-control" name="Name" placeholder="Enter product name">
+                  <input type="name" class="form-control" name="name" placeholder="Enter product name">
                 </div>
 
                 <div class="form-group">
@@ -41,10 +41,11 @@
                 <div class="form-group">
                       <label for="price">Price</label>
                       <input type="price" class="form-control" name="price" placeholder="Enter product price">
-              </div>
-
+                </div>
+            
                 <div class="form-group">
-                      <input type="file" name="name" multiple><br><br>
+                  <label for="image">Image URL</label>
+                  <input type="imageurl" class="form-control" name="imageurl" placeholder="Enter image url">
                 </div>
 
                 <button type="submit" class="btn btn-primary">Upload</button>

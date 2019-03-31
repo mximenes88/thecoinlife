@@ -19,19 +19,35 @@
      </div>
        <h1 class="title1">Products</h1>
        <% if(currentUser) {%>
-        <a href="/products/new" class="btn btn-primary">New Product</a>
+        <div class="newproduct">
+        <a href="/products/new" class="btn btn-danger">New Product</a>
+        </div>
         <% } %>
-        <ul class="list-group">
+        <ul>
         <% products.forEach((product) => { %>
-            <li class="list-group-item">
-              <a href="/products/<%product.id%>" <%= product.name %> </a>
-                <a href="/products/<%= product.id %>/edit" class="btn btn-warning">Edit</a>  
-                <form style="display:initial" action="/products/<%= product.id %>/destroy" method="post">
-                  <button type="submit" class="btn btn-danger">Delete</button>
-                </form>
+          <div class= "displayproducts">
+          <li class="list-group-item">
+                  <div>
+                    <a href="/products/<%=product.id%>"> 
+                      <img class= "coinimg"src="<%= product.imageurl %>">
+                    </a>
+                  </div>
+                  <a href="/products/<%=product.id%>"> <%= product.name %> </a>
+                  <a href="/products/<%= products.id %>/edit" class="btn btn-warning">Edit</a>  
+                  <form style="display:initial" action="/products/<%= products.id %>/destroy" method="post">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                  </form>
+                 
+          </div>
+        </li>
+      </div>
+         
           <% }) %>
-           </ul>
+        </ul>
+            
      </main>
      <%include ../static/partials/baseScripts.ejs %>
   </body>
 </html> 
+
+>

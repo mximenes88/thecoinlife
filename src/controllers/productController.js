@@ -17,13 +17,15 @@ module.exports = {
 
     create(req, res, next){
 			 let newProduct= {
-			    name: req.body.name,
+			  name: req.body.name,
 				description:req.body.description,
 				price:req.body.price,
-				userId:req.params.userId
+				imageurl:req.body.imageurl,
+				userId:req.user.id
 			  };
 			  productQueries.addProduct(newProduct, (err, product) => {
 				if(err){
+					console.log(err);
 					res.redirect(500, "/products");
 				} else {
 					res.redirect(303,`/products/${product.id}`);
@@ -36,7 +38,7 @@ module.exports = {
 			  if(err || product == null){
 				res.redirect(404, "/");
 			  } else {
-				res.render("product/show", {product});
+				res.render("products/show", {product});
 			  }
 			});
 		  }

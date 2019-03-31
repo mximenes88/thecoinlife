@@ -79,7 +79,7 @@ body{
 
 .uploads{
     padding:20px;
-    width: 300px;
+    width: 350px;
     margin-left:680px;
     text-align: center;
     background: lightgrey;
@@ -104,5 +104,39 @@ body{
     height:400px;
     margin-left:100px;
     text-align: center;
+    background: lightgrey;
+}
+
+.newproduct{
+    margin-left:100px;
+}
+
+.product22{
+    margin-left:200px;
+    text-align: center;
+}
+
+.displayproducts{
+    width: 30%;
+    margin-left:370px;
+    margin-bottom:10px;
+    background-color:lightcoral;
+}
+
+.coinimg{
+    width:200px;
+    height:100px;    
+}
+
+.coinimg1{
+    width:600px;
+    height:400px;
+    background-color:lightcoral;
+}
+
+.productsname{
+    margin-top:10px;
+    width:auto;
+    padding:10px;
     background: lightgrey;
 }

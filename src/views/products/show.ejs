@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <% include ../static/partials/head.ejs %>
+  </head>
+  <body>
+    <% include ../static/partials/navbar.ejs %>
+
+    <main class="container">
+      <div class= "product22">
+        <h1 class="productsname"><%= product.name %></h1>
+            <hr>
+            <div>
+                <img class="coinimg1" src="<%= product.imageurl %>" alt="<%= product.name %>">
+            </div>
+            <h2><%= product.price %></h2>
+            <p><%= product.description %></p>
+            <form action="/cart" method="post">
+                <button class="btn" type="submit">Add to Cart</button>
+            </form>
+    </main>
+
+    <% include ../static/partials/baseScripts.ejs %>
+
+  </body>
+</html>
