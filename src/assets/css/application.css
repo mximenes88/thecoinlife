@@ -37,6 +37,12 @@ body{
    
 }
 
+.jumbotron1{
+    width:95%;
+    margin-left:100px;
+    margin-top:8px;
+}
+
 .about_us{
     padding:30px;
     background: rgb(127, 122, 160);
