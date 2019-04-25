@@ -146,3 +146,14 @@ body{
     padding:10px;
     background: lightgrey;
 }
+
+.editProduct{
+    padding:30px;
+    background: rgb(127, 122, 160);
+    margin-top:50px;
+    margin-left:170px;
+    margin-right:55px;
+    margin-bottom:10px;
+    text-align: center;
+    background: lightgrey;
+}

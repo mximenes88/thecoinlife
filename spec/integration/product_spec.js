@@ -70,5 +70,35 @@ describe("routes : products", () => {
      
       });
 
+      describe("POST /products/:id/destroy", () => {
+
+        it("should delete the product with the associated ID", (done) => {
+          expect(product.id).toBe(1);
+   
+          request.post(`${base}/products/${this.product.id}/destroy`, (err, res, body) => {
+            Product.findById(1)
+            .then((product) => {
+              expect(err).toBeNull();
+              expect(product).toBeNull();
+              done();
+            })
+          });
+   
+        });
+   
+      });
+
+      describe("GET /products/:id/edit", () => {
+        it("should render a view with an edit post form", (done) => {
+          request.get(`${base}/products/${this.product.id}/edit`, (err, res, body) => {
+            expect(err).toBeNull();
+            expect(body).toContain("Edit Product");
+            expect(body).toContain("Italian Lire");
+            done();
+          });
+        });
+   
+      });
+
   });
 

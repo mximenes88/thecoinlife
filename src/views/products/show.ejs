@@ -12,12 +12,19 @@
             <hr>
             <div>
                 <img class="coinimg1" src="<%= product.imageurl %>" alt="<%= product.name %>">
-            </div>
-            <h2><%= product.price %></h2>
-            <p><%= product.description %></p>
+          </div>
+          <a href="/products/<%= product.id %>/edit" class="btn btn-warning">Edit</a>
+ ...
+            <h2>Price: <%= product.price %></h2>
+            <p>Description: <%= product.description %></p>
+            <form style="display:initial" action="/products/<%= product.id %>/destroy" method="post">
+              <button type="submit" class="btn btn-danger">Delete</button>
+            </form>
+
             <form action="/cart" method="post">
                 <button class="btn" type="submit">Add to Cart</button>
             </form>
+
     </main>
 
     <% include ../static/partials/baseScripts.ejs %>

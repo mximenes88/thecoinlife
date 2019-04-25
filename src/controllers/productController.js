@@ -41,5 +41,25 @@ module.exports = {
 				res.render("products/show", {product});
 			  }
 			});
-		  }
+			},
+			
+			destroy(req, res, next){
+				productQueries.deleteProduct(req.params.id, (err, deletedRecordsCount) => {
+					if(err){
+						res.redirect(500, `/products/${req.params.id}`)
+					} else {
+						res.redirect(303, "/products")
+					}
+				});
+			},
+
+			edit(req, res, next){
+        productQueries.getProduct(req.params.id, (err, product) => {
+          if(err || product == null){
+            res.redirect(404, "/");
+          } else {
+            res.render("products/edit", {product});
+          }
+        });
+      }
 }

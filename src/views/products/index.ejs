@@ -35,8 +35,8 @@
                     </a>
                   </div>
                   <a href="/products/<%=product.id%>"> <%= product.name %> </a>
-                  <a href="/products/<%= products.id %>/edit" class="btn btn-warning">Edit</a>  
-                  <form style="display:initial" action="/products/<%= products.id %>/destroy" method="post">
+                  <a href="/products/<%= product.id %>/edit" class="btn btn-warning">Edit</a> 
+                  <form style="display:initial" action="/products/<%= product.id %>/destroy" method="post">
                     <button type="submit" class="btn btn-danger">Delete</button>
                   </form>
                  

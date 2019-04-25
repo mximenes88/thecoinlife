@@ -26,6 +26,20 @@ module.exports ={
         .catch((err) => {
           callback(err);
         })
-      }
+      },
+
+      deleteProduct(id,callback){
+        return Product.destroy({
+          where:{id}
+        })
+        .then((deleteRecordsCount)=>{
+          callback(null,deleteRecordsCount);
+        })
+         .catch((err) =>{
+           callback(err);
+         })
+      },
+
+  
 }
 
