@@ -100,5 +100,45 @@ describe("routes : products", () => {
    
       });
 
+      describe("POST /products/:id/update", () => {
+
+        it("should return a status code 302", (done) => {
+          request.post({
+            url: `${base}/products/${this.product.id}/update`,
+            form: {
+              name: "Dollar",
+              description: "American Money",
+              price:10
+            }
+          }, (err, res, body) => {
+            expect(res.statusCode).toBe(302);
+            done();
+          });
+        });
+   
+        it("should update the product with the given values", (done) => {
+            const options = {
+              url: `${base}/products/${this.product.id}/update`,
+              form: {
+                title: "Dollar"
+              }
+            };
+            request.product(options,
+              (err, res, body) => {
+   
+              expect(err).toBeNull();
+   
+              Product.findOne({
+                where: {id: this.product.id}
+              })
+              .then((product) => {
+                expect(product.title).toBe("Dollar");
+                done();
+              });
+            });
+        });
+   
+      });
+
   });
 

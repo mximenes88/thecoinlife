@@ -39,6 +39,24 @@ module.exports ={
            callback(err);
          })
       },
+      updateProduct(id, updatedProduct, callback){
+        return Product.findById(id)
+        .then((product) => {
+          if(!product){
+            return callback("Product not found");
+          }
+   
+          product.update(updatedProduct, {
+            fields: Object.keys(updatedProduct)
+          })
+          .then(() => {
+            callback(null, product);
+          })
+          .catch((err) => {
+            callback(err);
+          });
+        });
+      }
 
   
 }

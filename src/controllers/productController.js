@@ -61,5 +61,14 @@ module.exports = {
             res.render("products/edit", {product});
           }
         });
-      }
+			},
+			update(req, res, next){
+				productQueries.updateProduct(req.params.id, req.body, (err, product) => {
+					if(err || product== null){
+						res.redirect(404, `/products/${req.params.id}/edit`);
+					} else {
+						res.redirect(`/products/${req.params.id}`);
+					}
+				});
+			}
 }

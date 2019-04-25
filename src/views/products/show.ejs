@@ -14,7 +14,6 @@
                 <img class="coinimg1" src="<%= product.imageurl %>" alt="<%= product.name %>">
           </div>
           <a href="/products/<%= product.id %>/edit" class="btn btn-warning">Edit</a>
- ...
             <h2>Price: <%= product.price %></h2>
             <p>Description: <%= product.description %></p>
             <form style="display:initial" action="/products/<%= product.id %>/destroy" method="post">
